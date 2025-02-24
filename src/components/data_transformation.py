@@ -1,12 +1,12 @@
 import sys
 from dataclasses import dataclass
 
-import numpy as np
+import numpy as np 
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder,StandardScaler
 
 from src.exception import CustomException
 from src.logger import logging
@@ -24,7 +24,7 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         '''
-        This function is responsible for data transformation
+        This function si responsible for data trnasformation
         
         '''
         try:
@@ -72,8 +72,7 @@ class DataTransformation:
         
         except Exception as e:
             raise CustomException(e,sys)
-    
-
+        
     def initiate_data_transformation(self,train_path,test_path):
 
         try:
